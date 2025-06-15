@@ -4,12 +4,12 @@ const greet = (name) => {
 };
 console.log(greet("Prince")); // Hello, Prince
 
-// //------------------------------- Real use case ---------------------------------------
+// //👉------------------------------- Real use case ---------------------------------------
 // let users = ["Raj", "Simran", "Rohan"];
 // users.forEach((user) => console.log("Welcome", user));
 
-//--------------------------------  2. Rest Operator ... (for multiple arguments) -------------------------------
-//👉 "Rest" ka matlab: baaki sab cheeze collect karo array ke form me
+//👉--------------------------------  2. Rest Operator ... (for multiple arguments) -------------------------------
+// "Rest" ka matlab: baaki sab cheeze collect karo array ke form me
 
 // function registerUser(name, ...skills) {
 //   console.log(`${name} has skills: ${skills.join(", ")}`);
@@ -18,8 +18,8 @@ console.log(greet("Prince")); // Hello, Prince
 // registerUser("Prince", "HTML", "CSS", "JS");
 // // Prince has skills: HTML, CSS, JS
 
-// ------------------------------- 3. Spread Operator ... (for spreading arrays/objects) --------------------------
-// ------ 👉 "Spread" ka matlab: array ya object ko alag-alag karke nikaalna ---------
+// 👉------------------------------- 3. Spread Operator ... (for spreading arrays/objects) --------------------------
+// ------  "Spread" ka matlab: array ya object ko alag-alag karke nikaalna ---------
 
 // //1.use with arrays
 // let arr1 = [1, 2];
@@ -35,7 +35,7 @@ console.log(greet("Prince")); // Hello, Prince
 // console.log(finalUser);
 // // { name: "Raj", age: 22, city: "Delhi" }
 
-//------------------------------------ 4.DEFAULT PARAMETER ------------------------------------------
+//👉------------------------------------ 4.DEFAULT PARAMETER ------------------------------------------
 
 // //default parameters
 // function greet(name = "Guest") {

@@ -4,14 +4,14 @@
 // | `while` loop      | Jab repeat karne ki limit **runtime pe decide ho**                       |
 // | `do...while` loop | Jab **kam se kam 1 baar code run karna hi ho**, chahe condition false ho |
 
-//-------------------- 1 -------------------------
+//👉-------------------- 1 -------------------------
 
 //for loop
 for (let i = 1; i <= 5; i++) {
   console.log("Hello " + i);
 }
 
-// ------------------ 2 ------------------------
+//👉 ------------------ 2 ------------------------
 
 // //while loop
 // let i = 1;
@@ -20,7 +20,7 @@ for (let i = 1; i <= 5; i++) {
 //   i++;
 // }
 
-// ----------------- 3 --------------------------
+//👉 ----------------- 3 --------------------------
 
 // //do while loop
 // let i = 5;
@@ -30,7 +30,7 @@ for (let i = 1; i <= 5; i++) {
 //   i++;
 // } while (i < 5);
 
-//-------------------4-----------------------
+//👉-------------------4-----------------------
 
 // //practice question. Q. Print numbers from 10 to 1 using for loop:
 

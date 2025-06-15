@@ -4,5 +4,25 @@
 2.loops (for, while, dowhile)
 3.function (declaration,parameters,return)
 4.Arrays and arrays methods (push, pop, map, filter, reduce, find, shift, unshift)
-5.object creation (object.keys(), object.values())
+5.object creation (object.keys(), object.values() )
+6.function (Arrow function, Rest/spread operator, default parameters)
+7.Template literals
+8.Destructuring array and object
+9.Dom manipulation
+10.Event handling
+11.Form Validation
+12.This keyword
+13.Closures
+14.Hoisting
+15.Callback functions
+16.Promises (.then, .catch)
+17.async and await
+18.Getch API (GET, POST, PUT, DELETE)
+19.JSON (parse, stringify)
+20.Error handling (try/catch)
+21.API integration practice
+22.ES6 modules (import/export)
+23.classes and inheritance
+24.localstorage and sessionstorage
+
 

@@ -4,7 +4,7 @@
 // | Parameters  | Function me data bhejne ke liye          |
 // | Return      | Function ke result ko wapas dene ke liye |
 
-// ✅ Function Declaration & Definition
+//👉 ✅ Function Declaration & Definition
 function add(a, b) {
   return a + b;
 }

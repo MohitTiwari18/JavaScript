@@ -1,4 +1,4 @@
-// ---OBJECT IN JS : JavaScript object ek real-world entity ko represent karta hai — jisme key-value pairs hote hain.
+//👉 ---OBJECT IN JS : JavaScript object ek real-world entity ko represent karta hai — jisme key-value pairs hote hain.
 
 //Object.keys() and Object.values()
 

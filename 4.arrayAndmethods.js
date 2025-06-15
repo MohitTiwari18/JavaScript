@@ -2,9 +2,9 @@
 // let fruits = ["apple", "banana", "mango"];
 // console.log(fruits[0]); // Output: apple
 
-//----------------- ARRAY METHODS ---------------------
+//👉----------------- ARRAY METHODS ---------------------
 
-//---------------------------- ✅ 1. push() – Add item at end ----------------
+//👉---------------------------- ✅ 1. push() – Add item at end ----------------
 
 //1.push method
 let users = [
@@ -17,28 +17,28 @@ users.push({ id: 3, name: "Riya" });
 
 console.log(users);
 
-//-------------------------- ✅ 2. pop() – Remove last item -------------
+//👉-------------------------- ✅ 2. pop() – Remove last item -------------
 
 // //2.pop method
 // let nums = [1, 2, 3];
 // nums.pop();
 // console.log(nums); // [1, 2]
 
-//------------------------- ✅ 3. shift() – Remove first item ---------------
+//👉------------------------- ✅ 3. shift() – Remove first item ---------------
 
 // //3shift method
 // let nums = [1, 2, 3];
 // nums.shift();
 // console.log(nums); // [2, 3]
 
-//----------------------- ✅ 4. unshift() – Add item at start ----------------------
+//👉----------------------- ✅ 4. unshift() – Add item at start ----------------------
 
 // //4.unshift method
 // let nums = [2, 3];
 // nums.unshift(1);
 // console.log(nums); // [1, 2, 3]
 
-//--------------------------- ✅ 5. map() – Loop & return new array ----------------------
+//👉--------------------------- ✅ 5. map() – Loop & return new array ----------------------
 
 // //5. map method
 // let nums = [1, 2, 3];
@@ -59,7 +59,7 @@ console.log(users);
 
 // console.log(users);
 
-//-----------------------✅ 6. filter() – Return items that match a condition -----------
+//👉-----------------------✅ 6. filter() – Return items that match a condition -----------
 
 // //6. filter method
 // let nums = [1, 2, 3, 4];
@@ -73,14 +73,14 @@ console.log(users);
 
 // console.log(users);
 
-//------------------ ✅ 7. reduce() – Reduce array to single value ---------------
+//👉------------------ ✅ 7. reduce() – Reduce array to single value ---------------
 
 // //7.reduce method
 // let nums = [10, 20, 30];
 // let total = nums.reduce((acc, val) => acc + val, 0);
 // console.log(total); // 60
 
-//------------------------✅ 8. find() – First value that matches condition ------------
+//👉------------------------✅ 8. find() – First value that matches condition ------------
 
 // //8.find method
 // let users = [
@@ -91,7 +91,7 @@ console.log(users);
 // let adult = users.find((user) => user.age >= 21);
 // console.log(adult); // { name: "Raj", age: 22 }
 
-//-------------------practice question. Q.Search (Find one) → Using find() ---------------
+//👉-------------------practice question. Q.Search (Find one) → Using find() ---------------
 
 // //search by find method
 // let user = users.find((u) => u.id === 2);
