@@ -17,7 +17,7 @@
 15.Callback functions
 16.Promises (.then, .catch)
 17.async and await
-18.Getch API (GET, POST, PUT, DELETE)
+18.Fetch API (GET, POST, PUT, DELETE)
 19.JSON (parse, stringify)
 20.Error handling (try/catch)
 21.API integration practice
