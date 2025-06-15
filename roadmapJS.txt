@@ -1,0 +1,8 @@
+--------  GOAL = UNDERSTAND SYNTAX, LOGIC, HOW JS FLOWS ----------------
+
+1.condional statement (if, else, elseif)
+2.loops (for, while, dowhile)
+3.function (declaration,parameters,return)
+4.Arrays and arrays methods (push, pop, map, filter, reduce, find, shift, unshift)
+5.object creation (object.keys(), object.values())
+
