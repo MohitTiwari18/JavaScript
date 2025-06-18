@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login & Registration Form Validation</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            font-family: sans-serif;
+        }
+
+        .container {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        form {
+            width: 350px;
+            margin: 20px 0;
+            padding: 20px;
+            background: #fff;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        input,
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        .error {
+            color: red;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- Registration Form -->
+        <form onsubmit="return validateRegistrationForm()" id="registrationForm">
+            <h2>🔐 Registration</h2>
+            <input type="text" id="regName" placeholder="Full Name" />
+            <input type="email" id="regEmail" placeholder="Email" />
+            <input type="password" id="regPassword" placeholder="Password" />
+            <input type="password" id="regConfirmPassword" placeholder="Confirm Password" />
+            <input type="submit" value="Register" />
+            <p id="regError" class="error"></p>
+        </form>
+
+        <!-- Login Form -->
+        <form onsubmit="return validateLoginForm()" id="loginForm">
+            <h2>🔑 Login</h2>
+            <input type="email" id="loginEmail" placeholder="Email" />
+            <input type="password" id="loginPassword" placeholder="Password" />
+            <input type="submit" value="Login" />
+            <p id="loginError" class="error"></p>
+        </form>
+
+    </div>
+
+    <script>
+        //Validation logic of registration form
+        function validateRegistrationForm() {
+            let name = document.getElementById("regName").value.trim();
+            let email = document.getElementById("regEmail").value.trim();
+            let password = document.getElementById("regPassword").value;
+            let confirmPassword = document.getElementById("regConfirmPassword").value;
+            let errorBox = document.getElementById("regError");
+
+            if (name === "" || email === "" || password === "" || confirmPassword === "") {
+                errorBox.textContent = "❌ All fields are required.";
+                return false;
+            }
+
+            if (!email.includes("@") || !email.includes(".")) {
+                errorBox.textContent = "❌ Invalid email format.";
+                return false;
+            }
+
+            if (password !== confirmPassword) {
+                errorBox.textContent = "❌ Passwords do not match.";
+                return false;
+            }
+
+            if (password.length < 6) {
+                errorBox.textContent = "❌ Password should be at least 6 characters.";
+                return false;
+            }
+
+            errorBox.textContent = "";
+            alert("✅ Registration Successful!");
+            return true;
+        }
+        //validation logic of login form
+        function validateLoginForm() {
+            let email = document.getElementById("loginEmail").value.trim();
+            let password = document.getElementById("loginPassword").value;
+            let errorBox = document.getElementById("loginError");
+
+            if (email === "" || password === "") {
+                errorBox.textContent = "❌ Please enter both email and password.";
+                return false;
+            }
+
+            if (!email.includes("@") || password.length < 6) {
+                errorBox.textContent = "❌ Invalid login credentials.";
+                return false;
+            }
+
+            errorBox.textContent = "";
+            alert("✅ Login Successful!");
+            return true;
+        }
+    </script>
+</body>
+
+</html>
