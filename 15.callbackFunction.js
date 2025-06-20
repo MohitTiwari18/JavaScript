@@ -17,14 +17,24 @@ Callback function ek aisa function hota hai jo kisi doosre function ke andar
 -Tum ek function banao
 -Us function me ek aur function pass karo
 -Jab pehla function chalta hai, to baad me tumhara passed function bhi chala diya jata hai — yehi hota hai callback
-*/
-function gharKaKaam(kamKhatmHua) {
-  console.log("Maa: Jhaadu pocha karlo!");
-  kamKhatmHua(); // call kar liya baad me
-}
+// */
+//----------------------------------------------------------------------------------------------------------------
+// function gharKaKaam(kamKhatmHua) {
+//   console.log("Maa: Jhaadu pocha karlo!");
+//   kamKhatmHua(); // call kar liya baad me
+// }
 
-function maaKoBatana() {
-  console.log("Beta: Ho gaya kaam maa!");
-}
+// function maaKoBatana() {
+//   console.log("Beta: Ho gaya kaam maa!");
+// }
 
-gharKaKaam(maaKoBatana);
+// gharKaKaam(maaKoBatana);
+//--------------------------------------------------------------------------
+function firstFunctionName(callback) {
+  console.log("Frist function is running");
+  callback();
+}
+function secondFunctionName() {
+  console.log("second function is running");
+}
+firstFunctionName(secondFunctionName);
