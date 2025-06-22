@@ -21,8 +21,8 @@
 19.JSON (parse, stringify)
 20.Error handling (try/catch)
 21.API integration practice
-22.ES6 modules (import/export)
-23.classes and inheritance
+22.Ecma script topics (Modules(import and export), classes and inheritance, set() and map() )
 24.localstorage and sessionstorage
+25.Portfolio Creation with integration of (weather API, Daily News API)
 
 

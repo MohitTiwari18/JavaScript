@@ -1,0 +1,181 @@
+<!--
+API Integration ka matlab hai:
+Apne app ya website ko doosri service ya server ke sath connect karna taaki data exchange ho sake — GET (data lena), POST (data bhejna), etc.
+
+API = Application Programming Interface
+Ye ek bridge (pul) jaisa hota hai jo do systems ke beech baat karne deta hai.
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cool API Integration UI</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #74ebd5, #9face6);
+            min-height: 100vh;
+            padding: 30px;
+            color: #333;
+        }
+
+        h2,
+        h3 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #222;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        input {
+            padding: 12px;
+            font-size: 16px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        input:focus {
+            border-color: #6a11cb;
+            outline: none;
+        }
+
+        button {
+            padding: 12px;
+            font-size: 16px;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background: linear-gradient(to right, #2575fc, #6a11cb);
+        }
+
+        ul {
+            list-style: none;
+            margin-top: 20px;
+            padding-left: 0;
+        }
+
+        li {
+            background: #f0f8ff;
+            margin: 10px 0;
+            padding: 12px 16px;
+            border-radius: 10px;
+            animation: slideIn 0.3s ease-in;
+            transition: transform 0.2s ease;
+        }
+
+        li:hover {
+            transform: scale(1.02);
+            background-color: #e6f0ff;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(-30px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Add User</h2>
+        <div class="form-group">
+            <input type="text" id="name" placeholder="Enter name" />
+            <input type="email" id="email" placeholder="Enter email" />
+            <button onclick="addUser()">Add User</button>
+        </div>
+
+        <h3>All Users</h3>
+        <ul id="userList"></ul>
+    </div>
+
+    <script>
+        const apiUrl = "https://jsonplaceholder.typicode.com/users";
+
+        // ✅ 1. GET - show users
+        async function fetchUsers() {
+            const res = await fetch(apiUrl);
+            const data = await res.json();
+            const list = document.getElementById("userList");
+            list.innerHTML = "";
+
+            data.slice(0, 5).forEach(user => {
+                const li = document.createElement("li");
+                li.innerText = `${user.name} (${user.email})`;
+                list.appendChild(li);
+            });
+        }
+
+        // ✅ 2. POST - add user (dummy)
+        async function addUser() {
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+
+            const res = await fetch(apiUrl, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ name, email })
+            });
+
+            const newUser = await res.json();
+            alert(`User ${newUser.name} added!`);
+            fetchUsers(); // Refresh user list
+        }
+
+        // Load users on page load
+        fetchUsers();
+    </script>
+</body>
+
+</html>
